@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import Layout from "./components/layout/Layout";
+// import Loan from "./components/loan/Loan";
+// import Kotak from "./components/kotak/Kotak";
+// import WhoWeAre from "./components/whoWeAre/WhoWeAre";
+// import Media from "./components/media/Media";
+import Media from "./components/test/Media";
+// import CardOverview from "./components/overview/Overview";
+// import CoreManagementTeam from "./components/coreManagementTeam/CoreManagementTeam";
+// import Gif from "./components/keyframes/Gif";
+// import Keyframes from "./components/keyframes/Keyframes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <CardOverview /> */}
+      {/* <CoreManagementTeam /> */}
+      {/* <WhoWeAre /> */}
+      <Media />
+      {/* <Kotak /> */}
+      {/* <Loan /> */}
+      {/* <Layout /> */}
+      {/* <Gif /> */}
+      {/* <Keyframes /> */}
     </div>
   );
-}
+};
 
 export default App;

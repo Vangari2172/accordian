@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.pay-animation img {
+  width: 100%;
+}
+.pay-animation {
+  margin: 0 auto;
+  animation: dgvpay 2s infinite;
+}
+@keyframes dgvpay {
+  0% {
+    content: url("./image/img_1.png");
+  }
+  25% {
+    content: url("./image/img_2.png");
+  }
+  50% {
+    content: url("./image/img_3.png");
+  }
+  75% {
+    content: url("./image/img_4.png");
+  }
+  100% {
+    content: url("./image/img_5.png");
+  }
+}

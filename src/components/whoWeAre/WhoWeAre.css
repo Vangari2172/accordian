@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 0;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  margin-top: 50px;
+}
+
+.who_section {
+  display: flex;
+  column-gap: 25px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: #060606;
+  margin-bottom: 30px;
+}
+
+.desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #060606;
+}
+
+.who_img {
+  width: 581px;
+}
+
+.who_img img {
+  width: 100%;
+}
+
+/*---------------SLIDER------------------ */
+
+.slick-slide {
+  margin: 0 20px;
+}
+
+.slick-slider {
+  width: 581px;
+  margin: 0 8%;
+}
+
+.slick-slider .slick-prev {
+  left: -40px;
+}
+
+.slick-slider .slick-dots li button:before {
+  font-size: 13px;
+  color: #094e8f;
+  box-shadow: 0px 0px 2px #ffffff;
+  border-radius: 50%;
+  margin-top: 9px;
+}
+
+.slick-slider .slick-dots li.slick-active button:before {
+  color: #094e8f;
+}
+
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+  color: #094e8f;
+  font-size: 30px;
+}
+
+/* -------------MEDIA QUERIES------------------ */
+
+@media (max-width: 1260px) {
+  .wrapper {
+    width: 90%;
+    padding: 0 60px;
+    margin-top: 50px;
+  }
+
+  .title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 60px;
+    color: #060606;
+    margin-bottom: 25px;
+  }
+
+  .desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #060606;
+  }
+
+  .who_img {
+    width: 500px !important;
+  }
+
+  .who_img img {
+    width: 100%;
+  }
+
+  .slick-slider {
+    width: 500px;
+  }
+
+  .slick-slider .slick-dots li button::before {
+    font-size: 13px;
+    color: #094e8f;
+    box-shadow: 0px 0px 2px #ffffff;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+}
+
+/* ------------------------------------- */
+
+@media (max-width: 1120px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 0;
+  }
+
+  .who_section {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+
+  .title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 60px;
+    color: #060606;
+    margin-bottom: 30px;
+  }
+
+  .desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #060606;
+  }
+
+  .who_img {
+    width: 581px !important;
+  }
+
+  .slick-slider .slick-prev {
+    left: -55px;
+  }
+
+  .slick-slider .slick-next {
+    right: -45px;
+  }
+
+  .slick-slider {
+    width: 581px;
+    margin: 0 auto;
+  }
+
+  .slick-slider .slick-dots li button::before {
+    font-size: 13px;
+    color: #094e8f;
+    box-shadow: 0px 0px 2px #ffffff;
+    border-radius: 50%;
+    margin-top: 9px;
+  }
+}
+
+/*--------------------------------------- */
+
+@media (max-width: 720px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+
+  .title {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #060606;
+    margin-bottom: 20px;
+  }
+
+  .desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #060606;
+  }
+
+  .who_img {
+    width: 370px !important;
+  }
+
+  .slick-slider {
+    width: 400px;
+  }
+
+  .slick-slider .slick-dots li button::before {
+    font-size: 13px;
+    color: #094e8f;
+    box-shadow: 0px 0px 2px #ffffff;
+    border-radius: 50%;
+  }
+
+  .slick-slider .slick-prev {
+    left: -45px;
+  }
+
+  .slick-slider .slick-next {
+    right: -3px;
+  }
+}
+
+/* -------------------------------- */
+
+@media (max-width: 540px) {
+  .who_img {
+    width: 328px !important;
+  }
+
+  .slick-slider {
+    width: 328px;
+  }
+
+  .who_section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
