@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-/* *:focus {
+*:focus {
   outline: none;
-} */
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -20,13 +20,7 @@ body {
   margin: 0 auto;
 }
 
-a {
-  text-decoration: none;
-}
-
 .media-section {
-  /* width: 1190px; */
-  /* height: 50px; */
   background-color: #094e8f;
   display: flex;
   column-gap: 125px;
@@ -45,6 +39,11 @@ a {
 .mobile-hidden {
   display: none;
 }
+
+.mobile-active {
+  display: none;
+}
+
 .media {
   font-family: "Poppins";
   font-style: normal;
@@ -58,8 +57,14 @@ a {
 }
 
 .media:hover,
-.media:focus,
-.media.active {
+.media:focus {
+  box-shadow: 0px -1px 4px #ffffff, 0px 1px 4px #ffffff;
+  border-radius: 200px;
+  padding: 4px 85px;
+  cursor: pointer;
+}
+
+.active {
   box-shadow: 0px -1px 4px #ffffff, 0px 1px 4px #ffffff;
   border-radius: 200px;
   padding: 4px 85px;
@@ -68,17 +73,13 @@ a {
 
 .media-box {
   display: grid;
-  /* width: 1190px; */
   padding: 22px 17px;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 35px;
   row-gap: 50px;
-  /* position: absolute;
-  top: 40px; */
 }
 
 .media-img {
-  /* width: 326px; */
   background: #3bf9e2;
   margin-bottom: 10px;
 }
@@ -117,12 +118,13 @@ a {
 /* ---------EVENTS------------ */
 
 .event-box {
+  background-image: url("../../images/media_events/background_img2.png");
+  background-size: cover;
+  background-position: center;
   padding: 13px 24px 46px 24px;
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px -4px 4px rgba(0, 0, 0, 0.15); */
   margin-bottom: 51px;
-  /* position: absolute;
-  top: 40px; */
 }
 
 .event-name {
@@ -192,7 +194,6 @@ a {
 
 .slick-slider .slick-prev::before {
   background-image: url("../../images/event/left_arrow.png");
-  /* background-size: cover; */
 }
 
 .slick-slider .slick-next::before {
@@ -200,10 +201,6 @@ a {
 }
 
 /* ---------PRESS-RELEASE------------ */
-/* 
-.press-container {
-  width: 1190px;
-} */
 
 .press {
   display: flex;
@@ -221,10 +218,6 @@ a {
   color: #060606;
 }
 
-/* .press-box {
-  position: absolute;
-  top: 40px;
-} */
 .pdf-img {
   width: 28.5px;
   margin: 0 auto;
@@ -251,7 +244,7 @@ a {
 }
 
 .press-container:nth-child(odd) {
-  background-color: #e6edf4;
+  background-color: rgba(9, 78, 143, 0.1);
   padding: 14px 39px;
 }
 
@@ -261,22 +254,12 @@ a {
     margin: 0 auto;
   }
 
+  /* Media */
+
   .media-section {
     column-gap: 30px;
   }
 
-  .press-pdf {
-    text-align: center;
-  }
-
-  .pdf-heading {
-    justify-self: center;
-    margin: 0 auto;
-  }
-
-  /* .media-img {
-    width: 300px !important;
-  } */
   .media {
     font-family: "Poppins";
     font-style: normal;
@@ -294,11 +277,25 @@ a {
     padding: 4px 40px;
     cursor: pointer;
   }
+
+  /* PRESS */
+
+  .press-pdf {
+    text-align: center;
+  }
+
+  .pdf-heading {
+    justify-self: center;
+    margin: 0 auto;
+  }
 }
+
 @media (max-width: 1060px) {
   .media-section {
     column-gap: 40px;
   }
+
+  /* MEDIA */
 
   .media {
     padding: 4px 40px;
@@ -319,6 +316,8 @@ a {
     margin-bottom: 15px;
     text-align: justify;
   }
+
+  /* EVENTS */
 
   .event-name {
     font-family: "Poppins";
@@ -346,6 +345,8 @@ a {
     /* height: 150px !important; */
   }
 
+  /* SLIDER */
+
   .slick-slider .slick-prev,
   .slick-slider .slick-next {
     position: absolute;
@@ -369,6 +370,8 @@ a {
     font-size: 25px;
   }
 
+  /* PRESS */
+
   .press-desc {
     font-family: "Poppins";
     font-style: normal;
@@ -391,6 +394,8 @@ a {
 }
 
 @media (max-width: 780px) {
+  /* MEDIA */
+
   .media-section {
     column-gap: 25px;
     padding: 5px 35px 5px 53px;
@@ -422,10 +427,35 @@ a {
     width: 20px;
   }
 
+  /* EVENTS */
+
   .event-image {
     width: 210px !important;
-    /* height: 150px !important; */
   }
+
+  .event-name {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #060606;
+  }
+
+  .event-intro {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #060606;
+    margin-bottom: 20px;
+  }
+
+  /* SLIDER */
+
   .slick-slider .slick-prev::before {
     background-image: url("../../images/event/left_arrow.png");
     background-size: cover;
@@ -449,26 +479,9 @@ a {
   .slick-slide {
     margin-right: 16px;
   }
-  .event-name {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    color: #060606;
-  }
 
-  .event-intro {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-    color: #060606;
-    margin-bottom: 20px;
-  }
+  /* PRESS */
+
   .press-desc {
     font-family: "Poppins";
     font-style: normal;
@@ -492,27 +505,13 @@ a {
 
 @media (max-width: 580px) {
   .desktop-hidden {
-    display: none;
-  }
-
-  .mobile-hidden {
     display: block;
   }
+
+  /* MEDIA */
 
   .media-section {
-    display: block;
-    background: none;
-    padding: 0;
-    /* margin-bottom: 24px; */
-    /* padding: 4px 6px 4px 13px; */
-  }
-  /* .media {
-    text-align: left;
-  } */
-  .media:hover,
-  .media:focus {
-    /* border-radius: 0; */
-    /* padding: 4px 40px; */
+    display: none;
   }
 
   .media-mobile {
@@ -530,7 +529,6 @@ a {
     text-align: center;
     color: #ffffff;
     background: #094e8f;
-    /* padding: 4px 85px; */
   }
   .media-name {
     font-family: "Poppins";
@@ -545,18 +543,66 @@ a {
     align-items: center;
   }
   .media-box {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
     row-gap: 40px;
     padding: 0;
-    /* margin-bottom: 40px; */
+    margin-bottom: 40px;
   }
   .main-media {
     margin-bottom: 40px;
   }
-  /* .media_watch_now:last-child {
-    margin-bottom: 40px;
-  } */
+
+  /* EVENTS */
+
+  .event-image {
+    width: 260px !important;
+    margin: 0 auto;
+  }
+  .event-name {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #060606;
+  }
+  .event-intro {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #060606;
+    margin-bottom: 9px;
+  }
+  .event-box {
+    padding-bottom: 19px;
+    margin-bottom: 20px;
+  }
+  .event-box:first-child {
+    margin-top: -24px;
+  }
+
+  /* SLIDER */
+
+  .slick-slider .slick-prev,
+  .slick-slider .slick-next {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+  }
+
+  .slick-slider {
+    text-align: center;
+  }
+  .slick-slide {
+    margin-right: 15px;
+  }
+
+  /* PRESS */
 
   .press-desc {
     font-family: "Poppins";
@@ -583,8 +629,7 @@ a {
 
   .press-container {
     padding-bottom: 14px;
-    /* margin-bottom: 14px; */
-    background-color: #e6edf4;
+    background-color: rgba(9, 78, 143, 0.1);
     padding: 0;
   }
 
@@ -594,7 +639,6 @@ a {
 
   .press-box {
     margin-top: -20px;
-    /* padding-top: 4px; */
   }
   .pdf-img {
     width: 13.5px;
@@ -608,75 +652,8 @@ a {
     font-weight: 500;
     font-size: 16px;
     line-height: 141.5%;
-    /* identical to box height, or 23px */
     width: 85px;
     text-decoration-line: underline;
-
     color: #ed1c24;
-  }
-
-  .event-image {
-    width: 260px !important;
-    margin: 0 auto;
-    /* margin: 0 0 0 25px; */
-    /* height: 150px !important; */
-  }
-  .event-name {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #060606;
-  }
-  .event-intro {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #060606;
-    margin-bottom: 9px;
-  }
-  .event-box {
-    /* padding: 7px 3px 19px 3px; */
-    /* margin-top: -24px; */
-    padding-bottom: 19px;
-    margin-bottom: 20px;
-  }
-  .event-box:first-child {
-    /* padding: 7px 3px 19px 3px; */
-    margin-top: -24px;
-    /* margin-bottom: 20px; */
-  }
-  .slick-slider .slick-prev,
-  .slick-slider .slick-next {
-    position: absolute;
-    top: 50%;
-    z-index: 2;
-  }
-
-  /* .slick-slider .slick-prev {
-    left: -28px;
-  }
-
-  .slick-slider .slick-next {
-    right: -12px;
-  } */
-  .slick-slider {
-    /* width: 260px; */
-    /* padding: 0 15px; */
-    text-align: center;
-  }
-  .slick-slide {
-    margin-right: 15px;
   }
 }

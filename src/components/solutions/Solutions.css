@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", "Lato";
+  line-height: 0;
+}
+
+.wrapper {
+  width: 1190px;
+  margin: 0 auto;
+}
+
+.desktop-tab {
+  background-color: #094e8f;
+  display: flex;
+  column-gap: 27px;
+  margin-top: 50px; /* NEED TO COMMENT*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 13px;
+  list-style: none;
+  position: relative;
+}
+
+.mobile-active {
+  display: none;
+}
+
+.tab-title {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+  background: #094e8f;
+  padding: 4px 75px;
+}
+
+.tab-title:hover,
+.tab-title:focus {
+  box-shadow: 0px -1px 4px #ffffff, 0px 1px 4px #ffffff;
+  border-radius: 200px;
+  padding: 4px 75px;
+  cursor: pointer;
+}
+
+.active {
+  box-shadow: 0px -1px 4px #ffffff, 0px 1px 4px #ffffff;
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+/* UNIONS */
+
+.dairy_unions_container,
+.dairy_societies_container,
+.dairy_farmers_container,
+.dairy_partners_container {
+  background-image: url("./images/solutions_background_image.png");
+  background-position: center;
+  background-size: cover;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.union-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  padding-top: 21px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.union-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.union-box1,
+.union-box2 {
+  border-right: 1px solid #094e8f;
+}
+
+.pay-img {
+  margin: 0 auto;
+  width: 157px;
+  margin-bottom: 25px;
+  padding-top: 14px;
+}
+
+.money-img {
+  width: 201px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-top: 14px;
+}
+
+.connect-img {
+  width: 226px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding-top: 14px;
+}
+
+.pay-img img,
+.money-img img,
+.connect-img img {
+  width: 100%;
+}
+
+.union-desc {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.union-video-content {
+  display: flex;
+  justify-content: center;
+}
+
+.union-video {
+  width: 490px !important;
+  height: 290px;
+  margin-bottom: 58px;
+}
+
+/* SLIDER */
+
+.union-video-content .slick-slider {
+  width: 490px;
+}
+
+.union-video-content .slick-slider .slick-dots li button::before {
+  margin-top: -45px;
+  color: #ed1c24;
+  box-shadow: 0px 0px 2px #ffffff;
+  font-size: 13px;
+}
+
+.union-video-content .slick-dots li.slick-active button:before {
+  color: #ed1c24;
+}
+
+/* SOCIETIES */
+
+.societies-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 53px;
+  text-align: center;
+}
+
+.societies-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  padding-top: 21px;
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.societies-box1 {
+  border-right: 1px solid #094e8f;
+}
+
+/* FARMERS */
+
+.farmers-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.farmers-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  padding-top: 21px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.farmers-box1,
+.farmers-box2 {
+  border-right: 1px solid #094e8f;
+}
+
+/* PARTNERS */
+
+.partners-title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #000000;
+  padding-top: 21px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.partners-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 51px;
+  text-align: center;
+}
+
+.dgv-solutions-img {
+  width: 181px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.dgv-solutions-img img {
+  width: 100%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1189px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tab-title {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 4px 35px;
+  }
+
+  .tab-title:hover,
+  .tab-title:focus {
+    padding: 4px 35px;
+  }
+
+  .union-title,
+  .societies-title,
+  .farmers-title,
+  .partners-title {
+    padding: 20px 20px 0 20px;
+    font-size: 16px;
+  }
+
+  .union-desc {
+    font-size: 16px;
+  }
+
+  .union-box1,
+  .union-box2,
+  .union-box3,
+  .societies-box1,
+  .societies-box2,
+  .farmers-box1,
+  .farmers-box2,
+  .farmers-box3 {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 870px) {
+  .desktop-tab {
+    column-gap: 15px;
+  }
+
+  .tab-title {
+    font-size: 14px;
+    padding: 4px 15px;
+  }
+
+  .tab-title:hover,
+  .tab-title:focus {
+    padding: 4px 15px;
+  }
+
+  .union-title,
+  .societies-title,
+  .farmers-title,
+  .partners-title {
+    padding: 20px 20px 0 20px;
+    font-size: 14px;
+  }
+
+  .union-desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .pay-img {
+    width: 107px;
+  }
+
+  .money-img {
+    width: 151px;
+  }
+
+  .connect-img {
+    width: 176px;
+  }
+
+  .dgv-solutions-img {
+    width: 131px;
+  }
+
+  .union-box,
+  .farmers-box {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .union-box3,
+  .farmers-box3 {
+    grid-column: span 2;
+  }
+
+  .union-box2,
+  .farmers-box2 {
+    border-right: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .desktop-tab {
+    display: none;
+  }
+
+  .mobile-active {
+    display: block;
+  }
+
+  .mobile-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 4px 6px 4px 13px !important;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    background: #094e8f;
+  }
+
+  .dairy_unions_container,
+  .dairy_societies_container,
+  .dairy_farmers_container,
+  .dairy_partners_container {
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-image: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .union-title,
+  .societies-title {
+    text-align: left;
+    font-size: 16px;
+    padding-top: -20;
+    margin-bottom: 25px;
+  }
+
+  .farmers-title,
+  .partners-title {
+    text-align: left;
+    padding-top: -20;
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .union-box,
+  .farmers-box,
+  .societies-box {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin-bottom: 40px;
+  }
+  .union-box3,
+  .farmers-box3 {
+    grid-column: span 1;
+  }
+  .union-box1,
+  .union-box2,
+  .union-box3,
+  .societies-box1,
+  .societies-box2,
+  .farmers-box1,
+  .farmers-box2,
+  .farmers-box3,
+  .partners-box {
+    padding: 0;
+    text-align: left;
+  }
+
+  .union-desc {
+    font-size: 14px;
+    line-height: 21px;
+    padding-left: 35px;
+    text-indent: -15px;
+    margin-bottom: 10px;
+  }
+
+  .union-desc::before {
+    content: "■";
+    color: #ed1c24;
+    font-weight: bold;
+    display: inline-block;
+    width: 3px;
+    font-size: 20px;
+    margin-left: 13px;
+  }
+
+  .union-desc:last-child {
+    margin: 0;
+  }
+
+  .union-box1,
+  .farmers-box1,
+  .societies-box1 {
+    border-right: none;
+  }
+
+  .pay-img,
+  .money-img,
+  .connect-img {
+    padding-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .union-video {
+    width: 329px !important;
+    height: 201px;
+    margin-bottom: 40px;
+  }
+
+  .union-video-content .slick-slider {
+    width: 329px !important;
+  }
+
+  .union-video-content .slick-slider .slick-dots li button::before {
+    margin-top: -35px;
+  }
+}
+
+@media (max-width: 350px) {
+  .union-video {
+    width: 250px !important;
+    height: 150px;
+    margin-bottom: 40px;
+  }
+
+  .union-video-content .slick-slider {
+    width: 250px !important;
+  }
+}
