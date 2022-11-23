@@ -208,7 +208,7 @@ const Solutions = () => {
                     className="union-video"
                     src={items.url}
                     title={items.title}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="fullscreen"
                   ></iframe>
                 );
@@ -285,7 +285,7 @@ const Solutions = () => {
                     className="union-video"
                     src={item.url}
                     title={item.title}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="fullscreen"
                   ></iframe>
                 );
@@ -384,7 +384,7 @@ const Solutions = () => {
                     className="union-video"
                     src={item.url}
                     title={item.title}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="fullscreen"
                   ></iframe>
                 );
@@ -451,7 +451,7 @@ const Solutions = () => {
                     className="union-video"
                     src={item.url}
                     title={item.title}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="fullscreen"
                   ></iframe>
                 );
