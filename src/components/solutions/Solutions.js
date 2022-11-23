@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Solutions.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -80,6 +80,12 @@ const Solutions = () => {
       ],
     },
   ];
+  const width = window.innerWidth;
+  useEffect(() => {
+    if (width <= 600) {
+      setTab1(false);
+    }
+  }, [width]);
 
   return (
     <div className="wrapper">
